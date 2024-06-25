@@ -1,0 +1,54 @@
+version: '3.8'
+
+services:
+  client-app:
+    container_name: client-app
+    build:
+      context: ./client-app
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    networks:
+      - mern-app
+    depends_on:
+      - server-app
+    environment:
+      - REACT_APP_API_URL=http://localhost:4000
+    stdin_open: true
+    tty: true
+    restart: always
+
+  server-app:
+    container_name: server-app
+    build:
+      context: ./server-app
+      dockerfile: Dockerfile
+    ports:
+      - "4000:4000"
+    networks:
+      - mern-app
+    depends_on:
+      - mongodb
+    restart: always
+    environment:
+      - PORT=4000
+      - CONNECTION_STRING=mongodb://mongo:27017/mern
+
+  mongodb:
+    container_name: mongo
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    networks:
+      - mern-app
+    volumes:
+      - mongo-data:/data/db
+    restart: always
+
+networks:
+  mern-app:
+    driver: bridge
+
+volumes:
+  mongo-data:
+    driver: local

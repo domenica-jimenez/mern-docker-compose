@@ -1,0 +1,14 @@
+*/node_modules
+*/dist
+*/coverage
+*/.nyc_output
+*/.vscode
+*/.idea
+*/.DS_Store
+*/.env
+*/.cache
+*/.eslintcache
+*/.parcel-cache
+
+.DS_Store
+.vscode

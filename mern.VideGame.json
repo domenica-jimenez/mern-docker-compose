@@ -1,0 +1,32 @@
+[{
+  "_id": {
+    "$oid": "6678d1eaa11d9529f93bfb1f"
+  },
+  "title": "The Legend of Zelda: Ocarina of Time",
+  "platform": "Nintendo 64",
+  "score": 99
+},
+{
+  "_id": {
+    "$oid": "6678d2e0a11d9529f93bfb22"
+  },
+  "title": "Super Mario 64",
+  "platform": "Nintendo 64",
+  "score": 94
+},
+{
+  "_id": {
+    "$oid": "6678d31fa11d9529f93bfb23"
+  },
+  "title": "The Legend of Zelda: Breath of the Wild",
+  "platform": "Nintendo Switch",
+  "score": 97
+},
+{
+  "_id": {
+    "$oid": "6678d36fa11d9529f93bfb24"
+  },
+  "title": "Super Mario Odyssey",
+  "platform": "Nintendo Switch",
+  "score": 97
+}]
